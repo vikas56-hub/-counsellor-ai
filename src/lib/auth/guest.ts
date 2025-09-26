@@ -9,8 +9,10 @@ export function getOrCreateGuestId(): string {
     if (!guestId) {
         guestId = uuidv4();
         localStorage.setItem(GUEST_ID_KEY, guestId);
+        return guestId;
     }
-    return guestId;
+    // guestId is string | null, so always return a string
+    return guestId || '';
 }
 
 export function clearGuestId() {
