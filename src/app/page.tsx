@@ -15,6 +15,7 @@ export default function Home() {
         />
         <ol>
           <li>
+            <div className="bg-red-700 text-white">If you see a red background, Tailwind is working!</div>
             Get started by editing <code>src/app/page.tsx</code>.
           </li>
           <li>Save and see your changes instantly.</li>
