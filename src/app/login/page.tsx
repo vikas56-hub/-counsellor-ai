@@ -1,3 +1,4 @@
+"use client"
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { getOrCreateGuestId } from '@/lib/auth/guest';
