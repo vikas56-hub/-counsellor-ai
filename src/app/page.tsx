@@ -15,6 +15,8 @@ import { GrainGradient } from "@paper-design/shaders-react";
 import clsx from "clsx";
 
 
+import type { Message } from "@/types/message";
+import type { ChatSession } from "@/types/chatSession";
 // Responsive hook
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
@@ -348,11 +350,11 @@ export default function ChatGPTPage() {
                       rows={2}
                     />
                     <div className="flex gap-2">
-                      <Button size="sm" variant="ghost" onClick={() => {
+                      <Button variant="ghost" onClick={() => {
                         setLocalMessages(msgs => msgs.map(m => m.id === msg.id ? { ...m, content: editValue } : m));
                         setEditingMsgId(null);
                       }}>Save</Button>
-                      <Button size="sm" variant="ghost" onClick={() => setEditingMsgId(null)}>Cancel</Button>
+                      <Button variant="ghost" onClick={() => setEditingMsgId(null)}>Cancel</Button>
                     </div>
                   </div>
                 ) : (
